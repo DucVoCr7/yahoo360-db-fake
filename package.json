@@ -1,0 +1,27 @@
+{
+  "name": "fakedb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sequelize:m": "npx sequelize-cli db:migrate",
+    "sequelize:s": "npx sequelize-cli db:seed:all",
+    "sequelize:m:undo": "npx sequelize-cli db:migrate:undo:all",
+    "sequelize:s:undo": "npx sequelize-cli db:seed:undo:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mysql2": "^2.3.3",
+    "read-excel-file": "^5.5.3",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "prettier": "2.7.1",
+    "sequelize-cli": "^6.5.2"
+  }
+}
