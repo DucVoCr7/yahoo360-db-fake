@@ -1,0 +1,71 @@
+// Ok
+
+table resortRoomType { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    resortId uuid
+    name string
+    area number
+    description text    
+    priceNormal number  
+    priceWeekend number 
+    priceHoliday number 
+  }
+  ref: resortRoomType.resortId > resort.id
+  
+table resortRoomTypeImage { 
+    id string [PK] 
+    createAt date 
+    updateAt date 
+    image string
+    resortRoomTypeId uuid
+  }
+  ref: resortRoomTypeImage.resortRoomTypeId > resortRoomType.id
+
+table hotelRoomType { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    hotelId uuid
+    name string
+    area number
+    description text  
+    priceNormal number 
+    priceWeekend number 
+    priceHoliday number 
+  }
+  ref: hotelRoomType.hotelId > hotel.id
+
+table hotelRoomTypeImage { 
+    id string [PK] 
+    createAt date 
+    updateAt date 
+    image string
+    hotelRoomTypeId uuid
+  }
+  ref: hotelRoomTypeImage.hotelRoomTypeId > hotelRoomType.id
+
+  
+table motelRoomType { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    motelId uuid
+    name string
+    area number
+    description text 
+    priceNormal number 
+    priceWeekend number 
+    priceHoliday number 
+  } 
+  ref: motelRoomType.motelId > motel.id
+  
+table motelRoomTypeImage { 
+    id string [PK] 
+    createAt date 
+    updateAt date 
+    image string
+    motelRoomTypeId uuid
+  }
+  ref: motelRoomTypeImage.motelRoomTypeId > motelRoomType.id

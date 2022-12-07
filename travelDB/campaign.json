@@ -1,0 +1,31 @@
+//Ok
+table campaign { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    name string
+    type tinyint 
+    content text
+    status tinyint
+  }
+
+table campaignImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    image string
+    campaignId uuid
+  }
+  ref: campaignImage.campaignId > campaign.id
+
+
+table campaignDetail { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    campaignId uuid
+    condition number
+    percentDiscount number
+    amountDiscount number
+  }
+  ref: campaignDetail.campaignId > campaign.id

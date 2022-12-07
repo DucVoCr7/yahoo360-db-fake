@@ -1,0 +1,48 @@
+//Ok  
+table comment { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    lesseeId uuid  
+    facilityId uuid
+    facilityType tinyint
+    content text
+    status tinyint
+  }
+  ref: comment.lesseeId > lessee.id
+  ref: comment.facilityId > motel.id
+  ref: comment.facilityId > hotel.id
+  ref: comment.facilityId > resort.id
+
+table commentImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    image string
+    commentId uuid  
+  }
+  ref: commentImage.commentId > comment.id
+
+table reply { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    commentId uuid  
+    userId uuid  
+    userType tinyint
+    content text
+    status tinyint
+  }
+  ref: reply.commentId > comment.id
+  ref: reply.userId > lessee.id
+  ref: reply.userId > lessor.id
+  ref: reply.userId > admin.id
+
+table replyImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    image string
+    replyId uuid  
+  }
+  ref: replyImage.replyId > reply.id

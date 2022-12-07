@@ -1,0 +1,53 @@
+// Ok
+
+table order { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    code string
+    status string 
+    lesseeId uuid
+    roomId uuid
+    roomType tinyint
+    timeStartUsing date
+    timeEndUsing date
+    initialPrice number
+    price number
+  } 
+ref: order.lesseeId > lessee.id
+ref: order.roomId > motelRoom.id
+ref: order.roomId > hotelRoom.id
+ref: order.roomId > resortRoom.id
+
+table cart { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    facilityId uuid
+    facilityType tinyint
+  } 
+ref: order.id > lessee.id
+ref: order.facilityId > motel.id
+ref: order.facilityId > hotel.id
+ref: order.facilityId > resort.id
+
+table order_campaignDetail { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    orderId uuid
+    campaignDetailId uuid
+  } 
+ref: order_campaignDetail.orderId > order.id
+ref: order_campaignDetail.campaignDetailId > campaignDetail.id
+
+table order_facilityAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    orderId uuid
+    facilityAmenityId uuid
+    numberUsed tinyint
+  } 
+ref: order_facilityAmenity.orderId > order.id
+ref: order_facilityAmenity.facilityAmenityId > facilityAmenity.id

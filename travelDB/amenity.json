@@ -1,0 +1,41 @@
+  // Amenity 
+  table facilityAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    name string
+    price number 
+    description text 
+    status tinyint
+    type tinyint
+  } 
+
+table facilityAmenityImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    image string
+    facilityAmenityId uuid
+  } 
+  ref: facilityAmenityImage.facilityAmenityId > facilityAmenity.id
+
+
+table roomAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    name string
+    price number 
+    description text 
+    status tinyint
+    type tinyint
+  } 
+
+table roomAmenityImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    image string
+    roomAmenityId uuid
+  } 
+  ref: roomAmenityImage.roomAmenityId > roomAmenity.id

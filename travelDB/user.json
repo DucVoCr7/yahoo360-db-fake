@@ -1,0 +1,77 @@
+
+// Ok
+
+table admin {
+  id uuid [PK] 
+  createAt date
+  updateAt date 
+  name string 
+  email string 
+  password string
+  phone number 
+  phoneId number
+  status tinyint
+  level string
+  apartmentId string
+  streetId string
+  wardId string 
+  districtId string 
+  provinceId string 
+  countryId string
+  fullAddress text  
+  image string 
+  imageId string 
+  birthday date 
+  gender string 
+} 
+
+table lessor {
+  id uuid [PK] 
+  createAt date
+  updateAt date 
+  name string 
+  email string 
+  password string
+  phone number 
+  phoneId number
+  status tinyint
+  level string
+  apartmentId string
+  streetId string
+  wardId string 
+  districtId string 
+  provinceId string 
+  countryId string
+  fullAddress text  
+  image string 
+  imageId string 
+  birthday date 
+  gender string 
+} 
+
+table lessee {
+  id uuid [PK] 
+  createAt date
+  updateAt date 
+  name string 
+  email string 
+  password string
+  phone number 
+  phoneId number
+  status tinyint
+  level string
+  apartmentId string
+  streetId string
+  wardId string 
+  districtId string 
+  provinceId string 
+  countryId string
+  fullAddress text  
+  image string 
+  imageId string 
+  birthday date 
+  gender string
+  lat float
+  long float
+  accumulatedMoney number
+} 

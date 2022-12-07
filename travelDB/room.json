@@ -1,0 +1,42 @@
+// Ok
+table resortRoom { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    resortId uuid
+    resortRoomTypeId uuid    
+    roomCode number   
+    roomStatus string  
+    phone string 
+    phoneId string 
+  }
+  ref: resortRoom.resortId > resort.id
+  ref: resortRoom.resortRoomTypeId > resortRoomType.id
+  
+table hotelRoom { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    hotelId uuid
+    hotelRoomTypeId uuid     
+    roomCode number 
+    roomStatus string 
+    phone string 
+    phoneId string 
+  }
+  ref: hotelRoom.hotelId > hotel.id
+  ref: hotelRoom.hotelRoomTypeId > hotelRoomType.id
+  
+table motelRoom { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    motelId uuid
+    motelRoomTypeId uuid 
+    roomCode number 
+    roomStatus string 
+    phone string 
+    phoneId string 
+  } 
+  ref: motelRoom.motelId > motel.id
+  ref: motelRoom.motelRoomTypeId > motelRoomType.id

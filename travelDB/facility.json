@@ -1,0 +1,105 @@
+//Facility 
+table hotel { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    name string 
+    email string 
+    password string 
+    status tinyint
+    level string
+    phone number 
+    phoneId number
+    apartmentId string
+    streetId string
+    wardId string 
+    districtId string 
+    provinceId string 
+    countryId string
+    fullAddress text
+    lat float 
+    long float 
+    lessorId uuid 
+    totalRooms number 
+    totalRoomsRented number 
+    description text 
+  } 
+  ref: hotel.lessorId > lessor.id
+
+table hotelImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    hotelId uuid
+  } 
+  ref: hotelImage.hotelId > hotel.id
+
+table motel { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    name string 
+    email string 
+    password string 
+    status tinyint
+    level string
+    phone number 
+    phoneId number
+    apartmentId string
+    streetId string
+    wardId string 
+    districtId string 
+    provinceId string 
+    countryId string
+    fullAddress text
+    lat float 
+    long float 
+    lessorId uuid 
+    totalRooms number 
+    totalRoomsRented number 
+    description text 
+  } 
+  ref: motel.lessorId > lessor.id
+
+table motelImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    motelId uuid
+  } 
+  ref: motelImage.motelId > motel.id
+
+table resort { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    name string 
+    email string 
+    password string 
+    status tinyint
+    level string
+    phone number 
+    phoneId number
+    apartmentId string
+    streetId string
+    wardId string 
+    districtId string 
+    provinceId string 
+    countryId string
+    fullAddress text
+    lat float 
+    long float 
+    lessorId uuid 
+    totalRooms number 
+    totalRoomsRented number 
+    description text 
+  } 
+  ref: resort.lessorId > lessor.id
+
+table resortImage { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    resortId uuid
+  } 
+  ref: resortImage.resortId > resort.id

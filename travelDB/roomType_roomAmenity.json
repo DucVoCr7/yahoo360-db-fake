@@ -1,0 +1,30 @@
+// Ok
+table hotelRoomType_roomAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    hotelRoomTypeId uuid 
+    roomAmenityId uuid 
+  } 
+  ref: hotelRoomType_roomAmenity.hotelRoomTypeId > hotelRoomType.id
+  ref: hotelRoomType_roomAmenity.roomAmenityId > roomAmenity.id
+  
+  table motelRoomType_roomAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    motelRoomTypeId uuid 
+    roomAmenityId uuid 
+  } 
+  ref: motelRoomType_roomAmenity.motelRoomTypeId > motelRoomType.id
+  ref: motelRoomType_roomAmenity.roomAmenityId > roomAmenity.id
+  
+  table resortRoomType_roomAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    resortRoomTypeId uuid 
+    roomAmenityId uuid 
+  }
+  ref: resortRoomType_roomAmenity.resortRoomTypeId > resortRoomType.id
+  ref: resortRoomType_roomAmenity.roomAmenityId > roomAmenity.id

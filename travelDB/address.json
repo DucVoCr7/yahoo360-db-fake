@@ -1,0 +1,66 @@
+// Address
+table apartment { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    streetId uuid
+    sortName string
+    fullName string
+  }
+  ref: apartment.streetId > street.id 
+  
+table street {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    wardId string
+    sortName string
+    fullName string
+  }
+  ref: street.wardId > ward.id
+  
+table ward {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    districtId string
+    sortName string
+    fullName string
+  }
+  ref: ward.districtId > district.id
+  
+table district {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    provinceId string
+    sortName string
+    fullName string
+  }
+  ref: district.provinceId > province.id
+  
+table province {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    countryId string
+    sortName string
+    fullName string
+  }
+  ref: province.countryId > country.id
+  
+table country {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    name string
+    phoneId string
+  }
+
+  
+  
+  
+  
+  
+  
+  

@@ -10,7 +10,6 @@ module.exports = {
         allowNull: false,
         type: DataTypes.CHAR(36),
       },
-      ...Columns.image(),
     });
   },
   async down(queryInterface, Sequelize) {

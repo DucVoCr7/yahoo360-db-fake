@@ -16,4 +16,4 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('questionFacility');
   },
-}; // Ok
+}; // Chỉ khách hàng lẻ dc đặt câu hỏi

@@ -1,0 +1,87 @@
+// Ok
+table question {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    userId uuid
+    userType tinyint
+    content text
+    status tinyint
+}
+ref: question.userId > lessee.id
+ref: question.userId > lessor.id
+ref: question.userId > admin.id
+
+table questionImage {
+    id string [PK] 
+    createAt date 
+    updateAt date
+    image string
+    questionId uuid
+}
+ref: questionImage.questionId > question.id
+
+table answerQuestion {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    questionId uuid
+    userId uuid
+    userType tinyint
+    content text
+    status tinyint
+}
+ref: answerQuestion.userId > lessee.id
+ref: answerQuestion.userId > lessor.id
+ref: answerQuestion.userId > admin.id
+
+table answerQuestionImage {
+    id string [PK] 
+    createAt date 
+    updateAt date
+    image string
+    answerQuestionId uuid
+}
+ref: answerQuestionImage.answerQuestionId > answerQuestion.id
+
+table questionFacility {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    lesseeId uuid
+    content text
+    status tinyint
+}
+ref: questionFacility.lesseeId > lessee.id
+
+table questionFacilityImage {
+    id string [PK] 
+    createAt date 
+    updateAt date
+    image string
+    questionFacilityId uuid
+}
+ref: questionFacilityImage.questionFacilityId > questionFacility.id
+
+table answerQuestionFacility {
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    questionFacilityId uuid
+    userId uuid
+    userType tinyint
+    content text
+    status tinyint
+}
+ref: answerQuestionFacility.userId > lessee.id
+ref: answerQuestionFacility.userId > lessor.id
+ref: answerQuestionFacility.userId > admin.id
+
+table answerQuestionFacilityImage {
+    id string [PK] 
+    createAt date 
+    updateAt date
+    image string
+    answerQuestionFacilityId uuid
+}
+ref: answerQuestionFacilityImage.answerQuestionFacilityId > answerQuestionFacility.id

@@ -1,0 +1,30 @@
+table hotel_facilityAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    hotelId uuid 
+    facilityAmenityId uuid 
+  }
+  ref: hotel_facilityAmenity.hotelId > hotel.id
+  ref: hotel_facilityAmenity.facilityAmenityId > facilityAmenity.id
+  
+  table motel_facilityAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    motelId uuid 
+    facilityAmenityId uuid 
+  }
+  ref: motel_facilityAmenity.motelId > motel.id
+  ref: motel_facilityAmenity.facilityAmenityId > facilityAmenity.id
+  
+  table resort_facilityAmenity { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date 
+    resortId uuid 
+    facilityAmenityId uuid 
+  }
+  ref: resort_facilityAmenity.resortId > resort.id
+  ref: resort_facilityAmenity.facilityAmenityId > facilityAmenity.id
+  
