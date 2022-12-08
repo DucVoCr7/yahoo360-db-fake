@@ -11,7 +11,7 @@
   } 
 
 table facilityAmenityImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date 
     image string
@@ -32,7 +32,7 @@ table roomAmenity {
   } 
 
 table roomAmenityImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date 
     image string

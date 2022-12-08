@@ -5,7 +5,19 @@ const { DataTypes } = require('sequelize');
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('order', {
-      ...Columns.id_createdAt_updatedAt(), // Có id = lesseeId
+      lesseeId: {
+        primaryKey: true,
+        allowNull: false,
+        type: DataTypes.CHAR(36),
+      },
+      createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE,
+      },
       ...Columns.facilityId_facilityType(),
     });
   },

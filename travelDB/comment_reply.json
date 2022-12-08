@@ -15,7 +15,7 @@ table comment {
   ref: comment.facilityId > resort.id
 
 table commentImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string
@@ -39,7 +39,7 @@ table reply {
   ref: reply.userId > admin.id
 
 table replyImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string

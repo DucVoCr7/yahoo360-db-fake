@@ -10,7 +10,7 @@ table campaign {
   }
 
 table campaignImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string

@@ -20,13 +20,13 @@ ref: order.roomId > hotelRoom.id
 ref: order.roomId > resortRoom.id
 
 table cart { 
-    id uuid [PK] 
+    lesseeId uuid [PK] 
     createAt date 
     updateAt date
     facilityId uuid
     facilityType tinyint
   } 
-ref: cart.id > lessee.id
+ref: cart.lesseeId > lessee.id
 ref: cart.facilityId > motel.id
 ref: cart.facilityId > hotel.id
 ref: cart.facilityId > resort.id

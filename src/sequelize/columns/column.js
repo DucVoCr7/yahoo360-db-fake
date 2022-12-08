@@ -21,7 +21,7 @@ const id_createdAt_updatedAt = (length = 36) => {
 
 const id_createdAt_updatedAt_image = () => {
   return {
-    id: {
+    imageId: {
       primaryKey: true,
       allowNull: false,
       type: DataTypes.STRING,

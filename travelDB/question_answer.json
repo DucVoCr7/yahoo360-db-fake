@@ -13,7 +13,7 @@ ref: question.userId > lessor.id
 ref: question.userId > admin.id
 
 table questionImage {
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string
@@ -36,7 +36,7 @@ ref: answerQuestion.userId > lessor.id
 ref: answerQuestion.userId > admin.id
 
 table answerQuestionImage {
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string
@@ -55,7 +55,7 @@ table questionFacility {
 ref: questionFacility.lesseeId > lessee.id
 
 table questionFacilityImage {
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string
@@ -78,7 +78,7 @@ ref: answerQuestionFacility.userId > lessor.id
 ref: answerQuestionFacility.userId > admin.id
 
 table answerQuestionFacilityImage {
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date
     image string

@@ -15,7 +15,7 @@ table resortRoomType {
   ref: resortRoomType.resortId > resort.id
   
 table resortRoomTypeImage { 
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date 
     image string
@@ -38,7 +38,7 @@ table hotelRoomType {
   ref: hotelRoomType.hotelId > hotel.id
 
 table hotelRoomTypeImage { 
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date 
     image string
@@ -62,7 +62,7 @@ table motelRoomType {
   ref: motelRoomType.motelId > motel.id
   
 table motelRoomTypeImage { 
-    id string [PK] 
+    imageId string [PK] 
     createAt date 
     updateAt date 
     image string

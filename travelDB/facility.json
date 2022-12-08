@@ -27,9 +27,10 @@ table hotel {
   ref: hotel.lessorId > lessor.id
 
 table hotelImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
-    updateAt date 
+    updateAt date
+    image string 
     hotelId uuid
   } 
   ref: hotelImage.hotelId > hotel.id
@@ -62,9 +63,10 @@ table motel {
   ref: motel.lessorId > lessor.id
 
 table motelImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
-    updateAt date 
+    updateAt date
+    image string 
     motelId uuid
   } 
   ref: motelImage.motelId > motel.id
@@ -97,9 +99,10 @@ table resort {
   ref: resort.lessorId > lessor.id
 
 table resortImage { 
-    id uuid [PK] 
+    imageId string [PK] 
     createAt date 
-    updateAt date 
+    updateAt date
+    image string 
     resortId uuid
   } 
   ref: resortImage.resortId > resort.id
