@@ -26,10 +26,10 @@ table cart {
     facilityId uuid
     facilityType tinyint
   } 
-ref: order.id > lessee.id
-ref: order.facilityId > motel.id
-ref: order.facilityId > hotel.id
-ref: order.facilityId > resort.id
+ref: cart.id > lessee.id
+ref: cart.facilityId > motel.id
+ref: cart.facilityId > hotel.id
+ref: cart.facilityId > resort.id
 
 table order_campaignDetail { 
     id uuid [PK] 
