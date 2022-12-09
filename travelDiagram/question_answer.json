@@ -49,6 +49,8 @@ table questionFacility {
     createAt date 
     updateAt date
     lesseeId uuid
+    facilityId string
+    facilityType tinyint
     content text
     status tinyint
 }

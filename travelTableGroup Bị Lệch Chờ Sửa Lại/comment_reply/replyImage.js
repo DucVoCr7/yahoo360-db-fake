@@ -1,5 +1,5 @@
 'use strict';
-const Columns = require('../columns/column.js');
+const Columns = require('../columns/column.js.js');
 
 const { DataTypes } = require('sequelize');
 

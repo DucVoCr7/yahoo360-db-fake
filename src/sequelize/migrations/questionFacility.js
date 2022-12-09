@@ -11,6 +11,7 @@ module.exports = {
         allowNull: false,
         type: DataTypes.CHAR(36),
       },
+      ...Columns.facilityId_facilityType(),
       ...Columns.content_status(),
     });
   },
