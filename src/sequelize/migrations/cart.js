@@ -5,7 +5,7 @@ const { DataTypes } = require('sequelize');
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('order', {
+    await queryInterface.createTable('cart', {
       lesseeId: {
         primaryKey: true,
         allowNull: false,
@@ -19,10 +19,9 @@ module.exports = {
         allowNull: false,
         type: DataTypes.DATE,
       },
-      ...Columns.facilityId_facilityType(),
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('order');
+    await queryInterface.dropTable('cart');
   },
 }; // OK

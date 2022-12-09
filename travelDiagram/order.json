@@ -23,10 +23,18 @@ table cart {
     lesseeId uuid [PK] 
     createAt date 
     updateAt date
+  } 
+ref: cart.lesseeId > lessee.id
+
+table cartDetail { 
+    id uuid [PK] 
+    createAt date 
+    updateAt date
+    cartId uuid
     facilityId uuid
     facilityType tinyint
   } 
-ref: cart.lesseeId > lessee.id
+ref: cart.cartId > cart.id
 ref: cart.facilityId > motel.id
 ref: cart.facilityId > hotel.id
 ref: cart.facilityId > resort.id
