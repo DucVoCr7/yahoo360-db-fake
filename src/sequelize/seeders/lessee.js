@@ -15,7 +15,7 @@ module.exports = {
           password: '$2a$10$Kj2R4yn/pd5/4mMPocVIputnyLpLOa.n/FIGZnX22eRcUIHEnwU/y',
 
           phone: faker.phone.number('09########'),
-          phoneId: faker.helpers.arrayElement(['+84', '+44', '+90']),
+          phoneId: faker.helpers.arrayElement(['84', '44', '90']),
 
           image: 'https://res.cloudinary.com/dy57fdikk/image/upload/v1659605718/ezgif-2-2b2c41425d_gws4ug.jpg',
           imageId: null,

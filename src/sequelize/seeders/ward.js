@@ -6,7 +6,7 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const ward = async () => {
       const ward = [];
-      await readXlsxFile('/Users/vohoaiduc/Downloads/Ward.xlsx').then((rows) => {
+      await readXlsxFile('/Users/ducvo/Desktop/Data/Ward.xlsx').then((rows) => {
         for (let i = 1; i < rows.length; i++) {
           const data = {
             id: rows[i][0],

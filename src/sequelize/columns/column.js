@@ -265,7 +265,7 @@ const status_level = () => {
     level: {
       allowNull: false,
       type: DataTypes.STRING(20),
-      default: 'normal',
+      defaultValue: 'normal',
       comment: 'Phân hạng, phân quyền, phân loại',
     },
   };
