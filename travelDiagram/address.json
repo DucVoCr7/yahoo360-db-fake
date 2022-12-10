@@ -54,7 +54,7 @@ table country {
     createAt date 
     updateAt date
     name string
-    phoneId number
+    phoneId string
   }
 
   

@@ -8,8 +8,8 @@ table hotel {
     password string 
     status tinyint
     level string
-    phone number 
-    phoneId number
+    phone string 
+    phoneId string
     apartmentId string
     streetId string
     wardId string 
@@ -44,8 +44,8 @@ table motel {
     password string 
     status tinyint
     level string
-    phone number 
-    phoneId number
+    phone string 
+    phoneId string
     apartmentId string
     streetId string
     wardId string 
@@ -80,8 +80,8 @@ table resort {
     password string 
     status tinyint
     level string
-    phone number 
-    phoneId number
+    phone string 
+    phoneId string
     apartmentId string
     streetId string
     wardId string 

@@ -13,7 +13,7 @@ module.exports = {
             createdAt: new Date(),
             updatedAt: new Date(),
             name: JSON.stringify({ vi: rows[i][1], en: rows[i][0] }),
-            phoneId: +rows[i][3],
+            phoneId: rows[i][3],
           };
           country.push(data);
         }

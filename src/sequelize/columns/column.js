@@ -76,11 +76,11 @@ const phone_phoneId = (isLessee = false) => {
     phone: {
       unique: true,
       allowNull: isLessee,
-      type: DataTypes.INTEGER(12),
+      type: DataTypes.STRING(12),
     },
     phoneId: {
       allowNull: isLessee,
-      type: DataTypes.INTEGER(6),
+      type: DataTypes.STRING(6),
     },
   };
 };

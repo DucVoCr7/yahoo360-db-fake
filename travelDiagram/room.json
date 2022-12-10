@@ -7,8 +7,8 @@ table resortRoom {
     resortRoomTypeId uuid    
     roomCode number   
     roomStatus string  
-    phone number 
-    phoneId number 
+    phone string 
+    phoneId string 
   }
   ref: resortRoom.resortId > resort.id
   ref: resortRoom.resortRoomTypeId > resortRoomType.id
@@ -21,8 +21,8 @@ table hotelRoom {
     hotelRoomTypeId uuid     
     roomCode number 
     roomStatus string 
-    phone number 
-    phoneId number 
+    phone string 
+    phoneId string 
   }
   ref: hotelRoom.hotelId > hotel.id
   ref: hotelRoom.hotelRoomTypeId > hotelRoomType.id
@@ -35,8 +35,8 @@ table motelRoom {
     motelRoomTypeId uuid 
     roomCode number 
     roomStatus string 
-    phone number 
-    phoneId number 
+    phone string 
+    phoneId string 
   } 
   ref: motelRoom.motelId > motel.id
   ref: motelRoom.motelRoomTypeId > motelRoomType.id

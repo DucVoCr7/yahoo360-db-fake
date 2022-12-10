@@ -8,8 +8,8 @@ table admin {
   name string 
   email string 
   password string
-  phone number 
-  phoneId number
+  phone string 
+  phoneId string
   status tinyint
   level string
   apartmentId string
@@ -32,8 +32,8 @@ table lessor {
   name string 
   email string 
   password string
-  phone number 
-  phoneId number
+  phone string 
+  phoneId string
   status tinyint
   level string
   apartmentId string
@@ -56,8 +56,8 @@ table lessee {
   name string 
   email string 
   password string
-  phone number 
-  phoneId number
+  phone string 
+  phoneId string
   status tinyint
   level string
   apartmentId string

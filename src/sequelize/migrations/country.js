@@ -12,7 +12,7 @@ module.exports = {
       },
       phoneId: {
         allowNull: false,
-        type: DataTypes.INTEGER(8),
+        type: DataTypes.STRING(8),
       },
     });
   },
