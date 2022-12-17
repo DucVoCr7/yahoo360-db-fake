@@ -49,9 +49,9 @@ const name_email_password = (isLessee = false) => {
       type: DataTypes.STRING(120),
     },
     email: {
-      unique: true,
-      allowNull: false,
       type: DataTypes.STRING(100),
+      allowNull: false,
+      unique: true,
     },
     password: {
       allowNull: isLessee,
@@ -254,19 +254,22 @@ const name_price_description_amenity = () => {
   };
 };
 
-const status_level = () => {
+const status_level = (
+  commentStatus = 'Trạng thái của đối tượng (0 - Hoạt động, 1 - Không hoạt động, 2 - Chưa được xácc thực)',
+  commentLevel = 'Phân hạng, phân quyền, phân loại'
+) => {
   return {
     status: {
       allowNull: false,
       type: DataTypes.TINYINT,
-      defaultValue: 0,
-      comment: 'Trạng thái của đối tượng (0 - Hoạt động, 1 - Không hoạt động, 2 - Khoá)',
+      defaultValue: 2,
+      comment: commentStatus,
     },
     level: {
       allowNull: false,
-      type: DataTypes.STRING(20),
-      defaultValue: 'normal',
-      comment: 'Phân hạng, phân quyền, phân loại',
+      type: DataTypes.TINYINT,
+      defaultValue: 0,
+      comment: commentLevel,
     },
   };
 };
@@ -311,7 +314,7 @@ const content_status = () => {
       allowNull: false,
       type: DataTypes.TINYINT,
       defaultValue: 0,
-      comment: 'Trạng thái của đối tượng (0 - hiện, 1 - khoá)',
+      comment: 'Trạng thái của đối tượng (0 - hiện, 1 - ẩn)',
     },
   };
 };
