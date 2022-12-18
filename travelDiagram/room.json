@@ -5,8 +5,8 @@ table resortRoom {
     updateAt date 
     resortId uuid
     resortRoomTypeId uuid    
-    roomCode number   
-    roomStatus tinyint 
+    code number   
+    status tinyint 
     phone string 
     phoneId string 
   }
@@ -19,8 +19,8 @@ table hotelRoom {
     updateAt date 
     hotelId uuid
     hotelRoomTypeId uuid     
-    roomCode number 
-    roomStatus tinyint
+    code number 
+    status tinyint
     phone string 
     phoneId string 
   }
@@ -33,8 +33,8 @@ table motelRoom {
     updateAt date 
     motelId uuid
     motelRoomTypeId uuid 
-    roomCode number 
-    roomStatus tinyint
+    code number 
+    status tinyint
     phone string 
     phoneId string 
   } 

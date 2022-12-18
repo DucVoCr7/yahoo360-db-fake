@@ -188,12 +188,12 @@ const facility = () => {
 // Room - Phòng
 const room = () => {
   return {
-    roomCode: {
+    code: {
       allowNull: false,
       type: DataTypes.SMALLINT.UNSIGNED,
       comment: 'Mã số của phòng',
     },
-    roomStatus: {
+    status: {
       allowNull: false,
       type: DataTypes.TINYINT,
       comment: 'Trạng thái của phòng 0: sẵn sàng đón khách, 1: đang có khách, 2: đang dọn dẹp, 3: đang sửa chữa',
