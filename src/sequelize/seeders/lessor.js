@@ -23,6 +23,7 @@ module.exports = {
 
           birthday: faker.date.birthdate(),
           gender: faker.helpers.arrayElement([0, 1]),
+          status: 0,
         };
         lessorList.push(lessor);
       });
