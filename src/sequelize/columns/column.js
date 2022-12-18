@@ -66,7 +66,7 @@ const birthday_gender = () => {
       type: DataTypes.DATEONLY,
     },
     gender: {
-      type: DataTypes.STRING(6),
+      type: DataTypes.TINYINT,
     },
   };
 };
@@ -178,6 +178,10 @@ const facility = () => {
       allowNull: false,
       type: DataTypes.TEXT,
     },
+    adminApproved: {
+      type: DataTypes.CHAR(36),
+      comment: 'Admin xét duyệt',
+    },
   };
 };
 
@@ -191,8 +195,8 @@ const room = () => {
     },
     roomStatus: {
       allowNull: false,
-      type: DataTypes.STRING(50),
-      comment: 'Trạng thái của phòng',
+      type: DataTypes.TINYINT,
+      comment: 'Trạng thái của phòng 0: sẵn sàng đón khách, 1: đang có khách, 2: đang dọn dẹp, 3: đang sửa chữa',
     },
   };
 };
@@ -284,7 +288,7 @@ const userId_userType = () => {
     userType: {
       allowNull: false,
       type: DataTypes.TINYINT,
-      comment: 'Xét loại cơ sở 0: lessee || 1: lessor || 2: admin',
+      comment: 'Xét loại user 0: lessee || 1: lessor || 2: admin',
     },
   };
 };
@@ -294,12 +298,12 @@ const facilityId_facilityType = () => {
     facilityId: {
       allowNull: false,
       type: DataTypes.CHAR(36),
-      comment: 'Id của model || hotel || resort',
+      comment: 'Id của motel || hotel || resort',
     },
     facilityType: {
       allowNull: false,
       type: DataTypes.TINYINT,
-      comment: 'Xét loại cơ sở 0: model || 1: hotel || 2: resort',
+      comment: 'Xét loại cơ sở 0: motel || 1: hotel || 2: resort',
     },
   };
 };

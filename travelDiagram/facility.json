@@ -7,7 +7,7 @@ table hotel {
     email string 
     password string 
     status tinyint
-    level string
+    level tinyint
     phone string 
     phoneId string
     apartmentId string
@@ -22,9 +22,11 @@ table hotel {
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 
-    description text 
+    description text
+    adminApproved uuid
   } 
   ref: hotel.lessorId > lessor.id
+  ref: hotel.adminApproved > admin.id
 
 table hotelImage { 
     imageId string [PK] 
@@ -43,7 +45,7 @@ table motel {
     email string 
     password string 
     status tinyint
-    level string
+    level tinyint
     phone string 
     phoneId string
     apartmentId string
@@ -58,9 +60,11 @@ table motel {
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 
-    description text 
+    description text
+    adminApproved uuid 
   } 
   ref: motel.lessorId > lessor.id
+  ref: motel.adminApproved > admin.id
 
 table motelImage { 
     imageId string [PK] 
@@ -79,7 +83,7 @@ table resort {
     email string 
     password string 
     status tinyint
-    level string
+    level tinyint
     phone string 
     phoneId string
     apartmentId string
@@ -94,9 +98,11 @@ table resort {
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 
-    description text 
+    description text
+    adminApproved uuid 
   } 
   ref: resort.lessorId > lessor.id
+  ref: resort.adminApproved > admin.id
 
 table resortImage { 
     imageId string [PK] 

@@ -22,7 +22,7 @@ module.exports = {
           imageId: null,
 
           birthday: faker.date.birthdate(),
-          gender: faker.helpers.arrayElement(['Male', 'Female']),
+          gender: faker.helpers.arrayElement([0, 1]),
         };
         lessorList.push(lessor);
       });

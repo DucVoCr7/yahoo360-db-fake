@@ -6,7 +6,7 @@ table resortRoom {
     resortId uuid
     resortRoomTypeId uuid    
     roomCode number   
-    roomStatus string  
+    roomStatus tinyint 
     phone string 
     phoneId string 
   }
@@ -20,7 +20,7 @@ table hotelRoom {
     hotelId uuid
     hotelRoomTypeId uuid     
     roomCode number 
-    roomStatus string 
+    roomStatus tinyint
     phone string 
     phoneId string 
   }
@@ -34,7 +34,7 @@ table motelRoom {
     motelId uuid
     motelRoomTypeId uuid 
     roomCode number 
-    roomStatus string 
+    roomStatus tinyint
     phone string 
     phoneId string 
   } 

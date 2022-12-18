@@ -11,7 +11,7 @@ table admin {
   phone string 
   phoneId string
   status tinyint
-  level string
+  level tinyint
   apartmentId string
   streetId string
   wardId string 
@@ -22,7 +22,7 @@ table admin {
   image string 
   imageId string 
   birthday date 
-  gender string 
+  gender tinyint 
 } 
 
 table lessor {
@@ -35,7 +35,7 @@ table lessor {
   phone string 
   phoneId string
   status tinyint
-  level string
+  level tinyint
   apartmentId string
   streetId string
   wardId string 
@@ -46,7 +46,7 @@ table lessor {
   image string 
   imageId string 
   birthday date 
-  gender string 
+  gender tinyint 
 } 
 
 table lessee {
@@ -59,7 +59,7 @@ table lessee {
   phone string 
   phoneId string
   status tinyint
-  level string
+  level tinyint
   apartmentId string
   streetId string
   wardId string 
@@ -70,7 +70,7 @@ table lessee {
   image string 
   imageId string 
   birthday date 
-  gender string
+  gender tinyint
   lat float
   long float
   accumulatedMoney number
