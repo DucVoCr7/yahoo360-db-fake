@@ -14,7 +14,7 @@ module.exports = {
       ...Columns.addressFull(true),
       ...Columns.image_user(),
       ...Columns.birthday_gender(),
-      ...Columns.lat_long(),
+      ...Columns.lat_lng(),
       accumulatedMoney: {
         allowNull: false,
         type: DataTypes.DOUBLE.UNSIGNED,

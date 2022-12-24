@@ -18,7 +18,7 @@ table hotel {
     countryId string
     fullAddress text
     lat float 
-    long float 
+    lng float 
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 
@@ -56,7 +56,7 @@ table motel {
     countryId string
     fullAddress text
     lat float 
-    long float 
+    lng float 
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 
@@ -94,7 +94,7 @@ table resort {
     countryId string
     fullAddress text
     lat float 
-    long float 
+    lng float 
     lessorId uuid 
     totalRooms number 
     totalRoomsRented number 

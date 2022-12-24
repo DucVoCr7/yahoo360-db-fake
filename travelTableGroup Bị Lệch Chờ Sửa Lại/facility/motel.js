@@ -10,7 +10,7 @@ module.exports = {
       ...Columns.status_level(),
       ...Columns.phone_phoneId(),
       ...Columns.addressFull(),
-      ...Columns.lat_long(),
+      ...Columns.lat_lng(),
       ...Columns.facility(),
     });
   },

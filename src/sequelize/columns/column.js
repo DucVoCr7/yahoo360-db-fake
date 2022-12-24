@@ -119,12 +119,12 @@ const addressFull = (isUser = false) => {
   };
 };
 
-const lat_long = () => {
+const lat_lng = () => {
   return {
     lat: {
       type: DataTypes.FLOAT,
     },
-    long: {
+    lng: {
       type: DataTypes.FLOAT,
     },
   };
@@ -334,7 +334,7 @@ module.exports = {
   addressFull,
   image_user,
   birthday_gender,
-  lat_long,
+  lat_lng,
   facility,
   address_name,
   price,
