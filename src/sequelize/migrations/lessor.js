@@ -1,7 +1,7 @@
 'use strict';
 const Columns = require('../columns/column.js');
 const { DataTypes } = require('sequelize');
-const commentStatus = '0 - Hoạt động, 1 - Không hoạt động, 2 - Chưa xác thực email';
+const commentStatus = '0 - Hoạt động, 1 - Chưa xác thực phone, 2 - Chưa xác thực email, 3 - Không còn hoạt động';
 const commentLevel = '0 - New, 1 - Bạc, 2 - Vàng, 3 - Bạch Kim, 4 - Diamond';
 
 module.exports = {

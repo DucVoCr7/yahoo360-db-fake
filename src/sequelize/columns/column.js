@@ -259,7 +259,7 @@ const name_price_description_amenity = () => {
 };
 
 const status_level = (
-  commentStatus = 'Trạng thái của đối tượng (0 - Hoạt động, 1 - Không hoạt động, 2 - Chưa được xácc thực)',
+  commentStatus = 'Trạng thái của đối tượng (0 - Hoạt động, 1 - Không hoạt động, 2 - Chưa được xác thực)',
   commentLevel = 'Phân hạng, phân quyền, phân loại'
 ) => {
   return {
