@@ -12,7 +12,7 @@ module.exports = {
       ...Columns.phone_phoneId(),
       ...Columns.status_level(commentStatus, commentLevel),
       ...Columns.addressFull(true),
-      ...Columns.image_user(),
+      ...Columns.image_imageId(),
       ...Columns.birthday_gender(),
     });
   },

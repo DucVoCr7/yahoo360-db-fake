@@ -12,7 +12,7 @@ module.exports = {
       ...Columns.phone_phoneId(true),
       ...Columns.status_level(commentStatus, commentLevel),
       ...Columns.addressFull(true),
-      ...Columns.image_user(),
+      ...Columns.image_imageId(),
       ...Columns.birthday_gender(),
       ...Columns.lat_lng(),
       accumulatedMoney: {
@@ -26,4 +26,4 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('lessee');
   },
-}; // Bảng bên thuê
+}; // Bảng bên thuê //

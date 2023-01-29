@@ -19,7 +19,7 @@ const id_createdAt_updatedAt = (length = 36) => {
   };
 };
 
-const id_createdAt_updatedAt_image = () => {
+const imageId_createdAt_updatedAt_image = () => {
   return {
     imageId: {
       primaryKey: true,
@@ -144,7 +144,7 @@ const address_name = (length = 255) => {
 };
 
 // Image
-const image_user = () => {
+const image_imageId = () => {
   return {
     image: {
       allowNull: false,
@@ -323,7 +323,7 @@ const content_status = () => {
   };
 };
 module.exports = {
-  id_createdAt_updatedAt_image,
+  imageId_createdAt_updatedAt_image,
   content_status,
   userId_userType,
   facilityId_facilityType,
@@ -332,7 +332,7 @@ module.exports = {
   name_email_password,
   phone_phoneId,
   addressFull,
-  image_user,
+  image_imageId,
   birthday_gender,
   lat_lng,
   facility,

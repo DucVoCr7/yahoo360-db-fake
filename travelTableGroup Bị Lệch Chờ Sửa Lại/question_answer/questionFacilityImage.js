@@ -6,7 +6,7 @@ const { DataTypes } = require('sequelize');
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('questionFacilityImage', {
-      ...Columns.id_createdAt_updatedAt_image(),
+      ...Columns.imageId_createdAt_updatedAt_image(),
       questionFacilityId: {
         allowNull: false,
         type: DataTypes.CHAR(36),
